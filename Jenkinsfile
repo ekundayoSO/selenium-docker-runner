@@ -10,8 +10,8 @@ pipeline{
             }
         }
 
-        post('Bring Grid Down'){
-            always{
+        stage('Bring Grid Down'){
+            steps{
                 bat "docker-compose -f grid.yml -f test-suites.yml down"
             }
         }
