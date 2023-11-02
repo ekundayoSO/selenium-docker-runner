@@ -4,13 +4,13 @@ pipeline{
 
     stages{
 
-        stage('Start Grid & Run Test'){
+        stage('Start Grid'){
             steps{
-                bat "docker-compose -f grid.yml up -d"
+                bat "docker-compose -f grid.yml up"
             }
         }
 
-        stage('Bring Grid Down'){
+        stage('Run Tests'){
             steps{
                 bat "docker-compose -f test-suites.yml up"
             }
