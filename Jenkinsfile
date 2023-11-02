@@ -6,7 +6,7 @@ pipeline{
 
         stage('Start Grid'){
             steps{
-                bat "docker-compose -f grid.yml up"
+                bat "docker-compose -f grid.yml up -d"
             }
         }
 
