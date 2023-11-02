@@ -28,6 +28,10 @@ services:
       - SE_NODE_OVERRIDE_MAX_SESSIONS=true
       - SE_NODE_MAX_SESSIONS=2
 
+  selenium-hub:
+    image: selenium/hub:4.10
+    container_name: selenium-hub
+
   selenium-rahul:
     image: topdandy/selenium-docker-test
     entrypoint:
