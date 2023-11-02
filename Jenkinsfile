@@ -20,6 +20,7 @@ pipeline{
 
     post{
         always{
+             bat "docker-compose -f test-suites.yml down"
              bat "docker system prune -f"
         }
     }
