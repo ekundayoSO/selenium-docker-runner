@@ -20,7 +20,7 @@ services:
     depends_on:
       - selenium-hub
     deploy:
-      replicas: 1
+      replicas: 0
     environment:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
